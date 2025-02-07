@@ -1,10 +1,11 @@
 #include <iostream>
 using namespace std;
 
-void regresionLineal(double *x,double *y,int *n,double* m, double *b){
+void regresionLineal(double *x,double *y,int n ,double* m, double *b){
   double sumX=0.0,sumY=0.0,sumXY=0.0,sumX2=0.0;
   
   for(int i=0;i<n;i++){
+    
   sumX+= *(x+i);
     
   sumY+= *(y+i);
@@ -23,6 +24,7 @@ void regresionLineal(double *x,double *y,int *n,double* m, double *b){
 }
 
 int main() {  
+
 const int n=5;
 double x[]={1,2,3,4,5};
 double y[]={2.2,2.8,4.5,3.7,5.5};
