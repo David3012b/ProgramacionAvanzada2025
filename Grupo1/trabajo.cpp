@@ -26,8 +26,8 @@ void gradienteDescendente(double *x, double *y, int n, double *m, double *b, dou
     
     for(int j = 0; j < n; j++) {
       double prediccion = (*m) * x[j] + *b;
-      gradienteM += -2 * x[j] * (y[j] - prediccion);
-      gradienteB += -2 * (y[j] - prediccion);
+      gradienteM += -2 *(*(x+j)*(*(y+j))-prediccion);
+      gradienteB += -2 * ((*y+j) - prediccion);
     }
     
     *m -= (alpha * gradienteM) / n;
